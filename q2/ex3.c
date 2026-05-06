@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include <listas.h>
 
-typedef struct lligada {
-    int valor;
-    struct lligada *prox;
-}*LInt;
+/*Give a non-recursive definition of the function void imprimeL (LInt) which prints the elements of a
+list (one per line) on the screen.*/
 
-int main(){
-
-}
+void imprimeL(LInt l){
+    while(l != NULL){
+        printf("%d\n", l->valor);
+        l = l->prox;
+    }
+} 
